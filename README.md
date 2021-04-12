@@ -1,2 +1,2 @@
 # UEVORA
-Some of the 
+
