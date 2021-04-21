@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Remove product</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<h3>Remove product</h3>
+<form th:action="@{/remove-product-c}" method="post">
+
+    <input type="text" id="id" name="id" placeholder="ID do produto"/>
+
+    <div><input type="submit" value="Delete"/></div>
+</form>
+
+<li style="line-height: 200px"><a href="/">Home Page</a></li>
+</body>
+</html>

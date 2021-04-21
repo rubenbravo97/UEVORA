@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+body {
+  
+  margin: auto;  /* serve para centrar a pagina no centro do ecra com 1028px*/
+  max-width: 1028px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 100%;
+  background-color: lightgrey;
+  overflow-x: hidden; /* Esconde a barra de navegacao de baixo caso exista*/
+}
+
+/* links */
+
+a:link {
+    color: #C00;
+  }
+a:visited {
+    color: #921A66;
+  }
+a:focus {
+	color: #921A66;
+}
+a:hover {
+    color: #921A66;
+  }
+a:active {
+	color:#F00;
+}
+
+/* intro */
+#intro{
+  overflow: auto;  /* Aumenta o tamanho do intro se o conteudo exceder o seu tamanho*/
+  background-color:grey;
+}
+#intro img{
+  width: 250px;
+  height: 150px;
+  border-radius: 1em;	
+  float: left;
+}
+
+/* navigation */
+#nav {
+  background-color: #751c54; 
+  overflow: hidden;
+  width: 100%;
+}
+#nav ul {
+  list-style:none;
+  padding: 0;
+  margin: 0 auto; 	
+  width: 19.5em; /*teste*/
+} 
+#nav ul li {
+	font-weight: normal;
+  text-transform: uppercase;
+	float: left;
+}
+#nav ul li a { 	
+  display: block; 	
+  padding: .5em; 	
+  border: 2px solid #ba89a8; 
+  border-radius: .5em;	
+  margin: .25em;
+}  
+#nav ul a:link {
+    color: #fff;
+  }
+#nav ul a:visited {
+    color: #fff;
+  }
+#nav ul a:focus {
+	color:#fc6;
+	border-color: #fff;
+}
+#nav ul a:hover {
+  color: #fc6;
+	border-color: #fff;
+  }
+#nav ul a:active {
+	color:#F00;
+}
+
+
+/* products */
+
+#products {
+  background-color: lightgray;
+  border: double grey;
+  border-radius: .3em;
+  overflow: auto;
+  }
+
+#products h2 {
+  font-size: 1.2em;
+  color: #ac267b;
+  text-align: center;
+  text-transform: uppercase;
+  }
+#products h3 {
+  clear:left; /*Varios clears sao usados para organizar e repartir a informacao da pagina*/
+  font-size: 1em;
+  text-transform: uppercase;
+  color: grey;
+  border-top: 2px solid;
+}
+#products h4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: grey;
+}
+
+#products em { 
+  color: red;
+  font-size: 2em;
+}
+#products img{
+  color: purple;
+  border: 3px solid;
+  float:left;
+  margin-bottom:20px;
+}
+
+/* Product*/
+
+#product {
+  background-color: lightgray;
+  border: double grey;
+  border-radius: .3em;
+  overflow: auto;
+  }
+
+#product h2 {
+  font-size: 1.2em;
+  color: #ac267b;
+  text-align: center;
+  text-transform: uppercase;
+  }
+#product h3 {
+  clear:left;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: grey;
+  border-top: 2px solid;
+}
+#product h4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: grey;
+}
+
+#product em { 
+  color: red;
+  font-size: 2em;
+}
+#product img{
+  color: purple;
+  border: 3px solid;
+  float:left;
+  width:300px;
+}
+
+/* Pesquisa avançada*/
+#pesquisar {
+  background-color: lightgray;
+  border: double grey;
+  border-radius: .3em;
+  overflow: auto;
+  }
+
+#pesquisar h2 {
+  font-size: 1.2em;
+  color: #ac267b;
+  text-align: center;
+  text-transform: uppercase;
+  }
+#pesquisar li{
+  font-size: 1em;
+  margin-top: 10px;
+}
+/* Categorias */
+
+#categorias {
+  clear:both;
+  background-color: lightgray;
+  border: double #FFBC53;
+  border-radius: .3em;
+  
+}
+
+#categorias h2 {
+  font-size: 1.2em;
+  color: #ac267b;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#categorias ul {
+  list-style:none;
+  width: 100%; 
+}
+
+#categorias ul li {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+#categorias ul li a { 	
+ border: 3px solid grey;
+ border-radius: .3em;
+}  
+#categorias ul a:link {
+   color: black;
+ }
+#categorias ul a:visited {
+   color: black;
+ }
+#categorias ul a:focus {
+ color:#fc6;
+ border-color: #fff;
+}
+#categorias ul a:hover {
+ color: #fc6;
+ border-color: #fff;
+ }
+#categorias ul a:active {
+ color:#F00;
+}
+
+
+
+
+@media screen and (min-width:480px){
+
+  #products img{
+    width: 124px;
+  }
+
+  p.moreabout{
+    max-width:100%;
+  }
+
+}
+
+@media screen and (min-width:600px){
+
+  #products img{
+    width: 180px;
+  }
+
+}
+@media screen and (max-width:600px){
+
+  #product img{
+    width: 550px;
+  }
+  #product p{
+    clear:left;
+  }
+
+}
+
+@media screen and (min-width:690px){
+
+  #products img{
+    width: 227px;
+  }
+
+}
+
+@media screen and (min-width:750px){
+
+  #content{
+    padding-left: 217px;
+  }
+
+  #products {
+    float: right;;
+    width:100%
+  }
+  #product {
+    float: right;;
+    width:100%
+  }
+  #pesquisar {
+    float: right;;
+    width:100%
+  }
+
+  #categorias {
+    width: 205px;
+    display:inline-block; /*util para organizar as categiras de lado na pagina junto com os produtos*/
+
+  }
+  
+  #categorias ul li {
+    float: left;
+    clear: left;
+  }
+
+
+}

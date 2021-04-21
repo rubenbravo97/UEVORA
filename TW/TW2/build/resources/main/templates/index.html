@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport"content="width=device-width, initial-scale=1">
+    <title>Restoration | Farm Store</title>
+    <link rel="stylesheet" href="basic.css">
+  </head>
+
+  <script>
+
+
+
+  </script>
+  <li><a href="/product">produto</a></li>
+  <li><a href="/new-user">criar user</a></li>
+  <li><a href="/list-users">ver users</a></li>
+  <li><a href="/new-product">adicionar produto</a></li>
+  <li><a href="/remove-product">remover produto</a></li>
+  <li><a href="/list-products">ver produtos</a></li>
+
+
+
+  <p th:text="'Utilizador atual: ' + ${user}" />
+
+
+  <form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+  </form>
+
+
+  <body >
+    <div id="intro">
+      <img src="images/farm.jpg" alt="farm">
+      <form method='get' th:action='@{/}'>
+      <div style="margin-top:50px; padding-left:250px; padding-right:270px;">
+        <input type="text" id="pesquisar" name="pesquisa" style="float:left; width:100%;"/>
+      </div>
+      <input style=" width:auto; " type="submit" value="Search" />
+      <a href="/advanced_search.html">Advanced Search</a>
+      </form>
+    </div>
+
+
+        <div style="clear:both;" id="content">
+          <div  id="products">
+            <h2>Produtos</h2>
+            <h2><td th:text= "${tipo}" /></h2>
+            <h4>
+            <td  th:text="'Encontrados: ' + ${count}" />
+            </h4>
+            <tr th:each="produto: ${fiveprod}">
+
+            <h3><a href="/product" th:href="'/product?id='+${produto.id}"> <td th:text="${produto.name}"/> </a></h3>
+            <p><a href="/product" ><img src= "images/farm.jpg" th:src="'images/' + ${produto.imagename}" alt="imagem"></a></p>
+            <em><td th:text="${produto.price}+ '&euro;'"/></em>
+            <p> <td th:text="${produto.descricao}"/> </p>
+
+            </tr>
+
+          </div>
+        </div>
+
+
+        <div id="categorias">
+          <ul>
+          <li><h2>Categorias</h2></li>
+            <li><a href="?pesquisa=ALL">ALL</a></li>
+            <li><a href="?pesquisa=ANIMAIS">Animais</a></li>
+            <li><a href="?pesquisa=COMIDA">Comida</a></li>
+            <li><a href="?pesquisa=ACESSORIOS">Acess&oacute;rios</a></li>
+          </ul>
+        </div>
+
+
+
+        <div id="nav">
+          <ul>
+            <tr th:each="paginas: ${paginas}">
+
+              <li><a href="/" th:href="'?pagina='+${paginas} + '&pesquisa='+ ${tipo}"><td th:text="${paginas}"/></a></li>
+
+            </tr>
+
+          </ul>
+        </div>
+
+        <div style="color: grey;
+        border-top: 5px solid;
+        width: 100%;" id="about">
+        <a href="#">About this page</a>
+        </div>
+
+
+      </body>
+    </html>

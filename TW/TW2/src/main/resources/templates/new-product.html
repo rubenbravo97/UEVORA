@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Criar Produto</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<h3>Criar produto</h3>
+<form method='post' th:action='@{/new-product-c}' enctype="multipart/form-data">
+
+    <input type="text" id="name" name="name" placeholder="Nome"/>
+    <input type="text" id="price" name="price" placeholder="Preco"/>
+
+    <li><textarea name="descricao" cols="40" rows="5" placeholder="Descricao"></textarea></li>
+
+    <br>
+    <input type="radio" id="ANIMAIS" name="type" value="ANIMAIS">
+    <label for="ANIMAIS">Animal</label>
+    <input type="radio" id="COMIDA" name="type" value="COMIDA">
+    <label for="COMIDA">Comida</label>
+    <input type="radio" id="ACESSORIOS" name="type" value="ACESSORIOS">
+    <label for="ACESSORIOS">Acessorios</label>
+    <br>
+    <label>Photos: </label>
+    <input type="file" name="file" accept="image/png, image/jpeg, image/jpg" />
+
+
+    <li><input type="submit" value="Submit"></li>
+
+</form>
+<li style="line-height: 200px"><a href="/">Home Page</a></li>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Criar cliente</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<h3>Criar cliente</h3>
+	<form th:action="@{/new-user-c}" method="post">
+
+		<input type="text" id="Username" name="Username" placeholder="username"/>
+		<input type="password" id="password" name="password" placeholder="password"/>
+
+		<br>
+		<input type="radio" id="ROLE_CLIENT" name="role" value="client">
+		<label for="ROLE_CLIENT">client</label>
+		<input type="radio" id="ROLE_ADMIN" name="role" value="admin">
+		<label for="ROLE_ADMIN">admin</label>
+		<br>
+
+		<div><input type="submit" value="Create"/></div>
+	</form>
+
+	<li style="line-height: 200px"><a href="/">Home Page</a></li>
+</body>
+</html>

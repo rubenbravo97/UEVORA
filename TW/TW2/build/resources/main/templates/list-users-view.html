@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <style>
+    table, th, td {
+    	  border: 1px solid black;
+    	}
+    </style>
+    
+</head>
+<body>
+
+	<p>Lista de clientes</p>
+    <p th:text="${customerList}" />
+    
+    <p>Lista de clientes</p>
+    <table>
+    <tr th:each="user: ${customerList}">
+        <td th:text="'ID: ' + ${user.id}"/>
+        <td th:text="'Nome: ' + ${user.userName}"/>
+        <td th:text="'Password: ' + ${user.password}"/>
+        <td th:text="'Role: ' + ${user.role}"/>
+    </tr>
+    </table>
+    <li style="line-height: 200px"><a href="/">Home Page</a></li>
+</body>
+</html>

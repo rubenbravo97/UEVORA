@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Criar encomenda</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<h3>Criar encomenda</h3>
+	<form method='post' th:action='@{/new-orders}'>
+
+		<input type="number" id="id" name="id" value="Client-ID"/>
+		<input type="text" id="entrada" name="entrada" value="A Entrada"/>
+		<input type="text" id="principal" name="principal" value="O prato principal"/>
+		<input type="text" id="bebida" name="bebida" value="A bebida"/>
+		<input type="text" id="sobremesa" name="sobremesa" value="A sobremesa"/>
+		
+		<input type="submit" value="Submit">
+
+	</form>
+
+	<li style="line-height: 200px"><a href="/">Home Page</a></li>
+</body>
+</html>

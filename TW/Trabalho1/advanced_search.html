@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport"content="width=device-width, initial-scale=1">
+    <title>Restoration | Farm Store</title>
+    <link rel="stylesheet" href="basic.css">
+  </head>
+
+  <body >
+    <div id="intro">
+      <img src="images/farm.jpg" alt="farm">
+      <div style="margin-top:50px; padding-left:250px; padding-right:270px;">
+        <input type="text" style="float:left; width:100%;"/>
+      </div>
+      <input style=" width:auto; " type="button" value="Search" />
+      <a href="advanced_search.html">Advanced Search</a>
+    </div>
+
+    
+  
+    <div style="clear:both;" id="content">
+      <div  id="pesquisa">
+        <form action="http://localhost:8080/search.html" method="POST">
+
+            <h2>Pesquisa avan&ccedil;ada</h2>
+            <li>Descri&ccedil;&atilde;o do produto:</li>
+            <textarea name="entry" rows="4" cols="60"></textarea>
+            <li>
+            <label for="categoria">Escolha a categoria:</label>
+            <select id="categoria" name="categoria">
+            <option value="null">------------</option>
+            <option value="Animais">Animais</option>
+            <option value="Comida">Comida</option>
+            <option value="Acessorios">Acessorios</option>
+            </select>
+            </li>
+            <li>
+                Preco minimo:
+                <input name="min" type="text">
+                
+            </li>
+            <li>
+                Preco maximo:
+                <input name= "max" type="text">
+            </li>
+            <li>
+                <label for="localizacao">Escolha a localizacao:</label>
+                <select id="localizacao" name="localizacao">
+                <option value="null">------------</option>
+                <option value="Evora">Evora</option>
+                <option value="Lisboa">Lisboa</option>
+                <option value="Porto">Porto</option>
+                </select>
+            </li>
+            <li>
+                Data em que o produto foi listado na loja pela 1 vez
+                <input name="data1" type="date">
+            </li>
+            <li>
+                Data em que o produto deixa de estar disponivel para venda
+                <input name="data2" type="date">
+            </li>
+            <input style="margin-bottom:20px; margin-top: 20px; font-size: 1.2em;" value="Pesquisar" type="submit">
+        </form>
+
+      </div>
+
+  
+    </div>
+
+
+    <div id="categorias">
+      <ul>
+      <li><h2>Categorias</h2></li>
+      <li><a href="#">Animais</a></li>
+      <li><a href="#">Comida</a></li>
+      <li><a href="#">Acess&oacute;rios</a></li>
+      </ul>
+    </div>
+
+
+
+    <div id="nav">
+      <ul>
+      <li><a href=""><</a></li>
+      <li><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">></a></li>
+      </ul>
+    </div>
+
+    <div style="color: grey;
+    border-top: 5px solid;
+    width: 100%;" id="about">
+    <a href="#">About this page</a>
+    </div>
+
+
+  </body>
+</html>
